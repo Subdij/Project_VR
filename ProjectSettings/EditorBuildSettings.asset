@@ -6,10 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Piscine.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 71c1a15bb42737243bb7a6d35d218909,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 23bb498e9b6ddfb4f9dc53a90588f2b5,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: d41bc4b18ccdce544aa86f66b055d5e0,
       type: 2}
