@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tin-Box
+  - Throwable
+  - Controller
   layers:
   - Default
   - TransparentFX
