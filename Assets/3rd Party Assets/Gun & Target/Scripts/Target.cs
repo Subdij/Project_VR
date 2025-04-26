@@ -14,6 +14,9 @@ namespace _3rd_Party_Assets.Gun__Target.Scripts
         private Vector3 _randomRotation;
         private bool _isDisabled;
 
+        // Score
+        private int Score;
+
         private void Awake()
         {
             _meshRenderer = GetComponent<MeshRenderer>();
@@ -39,6 +42,7 @@ namespace _3rd_Party_Assets.Gun__Target.Scripts
                 TargetDestroyEffect();
                 Invoke("ToggleTarget", 3f);
             }
+
         }
 
         private void ToggleTarget()
