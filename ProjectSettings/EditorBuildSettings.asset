@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Chamboule-tout.unity
+    guid: 7239f6904d1027a48b7c9d64037549f6
+  - enabled: 1
     path: Assets/Scenes/Piscine.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
