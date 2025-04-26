@@ -849,7 +849,7 @@ MonoBehaviour:
   hinge: {fileID: 1922364061}
   dropTorque: 5
   targetVelocity: -100
-  resetDelay: 5
+  resetDelay: 2
   spongebobTransform: {fileID: 1079609483}
 --- !u!1 &1079609481 stripped
 GameObject:
