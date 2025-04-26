@@ -27,6 +27,7 @@ public class ScoreManager : MonoBehaviour
         if (other.CompareTag("Tin-Box")) {
             Score += 1;
             ScoreText.text = "Score: " + Score;
+            transform.gameObject.GetComponent<AudioSource>().Play();
         }
     }
 }
