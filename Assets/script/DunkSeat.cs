@@ -9,44 +9,54 @@ public class DunkSeat : MonoBehaviour
     public float targetVelocity = -100f;
 
     [Header("Réinitialisation")]
-    [Tooltip("Temps avant de remettre la chaise en position initiale")]
     public float resetDelay = 2f;
 
-    private bool hasDropped = false;
-    private Quaternion initialLocalRotation;
+    [Header("Référence Bob l'Éponge")]
+    public Transform spongebobTransform;
+    private Rigidbody spongebobRigidbody;
+
+    // Sauvegarde des états initiaux
+    private Quaternion seatInitialRotation;
+    private Vector3    spongebobInitialPosition;
+    private Quaternion spongebobInitialRotation;
+
     private JointLimits lockedLimits;
+    private bool hasDropped = false;
 
     void Start()
     {
-        // Sauvegarde la rotation initiale
-        initialLocalRotation = transform.localRotation;
-
-        // Verrouille la chaise dès le départ : pas de mouvement autorisé
+        // 1. Chaise
+        seatInitialRotation = transform.localRotation;
         lockedLimits = new JointLimits { min = 0f, max = 0f };
-        hinge.limits = lockedLimits;
-        hinge.useLimits = true;
-        hinge.useMotor = false;
+        hinge.limits     = lockedLimits;
+        hinge.useLimits  = true;
+        hinge.useMotor   = false;
+
+        // 2. Bob l’Éponge
+        if (spongebobTransform != null)
+        {
+            spongebobInitialPosition = spongebobTransform.position;
+            spongebobInitialRotation = spongebobTransform.rotation;
+            spongebobRigidbody       = spongebobTransform.GetComponent<Rigidbody>();
+        }
+        else
+        {
+            Debug.LogWarning("Référence à Bob l’Éponge manquante !");
+        }
     }
 
-    /// <summary>
-    /// Appelé par la cible : libère la chaise pour qu'elle bascule
-    /// </summary>
     public void TriggerDrop()
     {
         if (hasDropped) return;
         hasDropped = true;
 
-        // Déverrouille pour permettre le mouvement
         hinge.useLimits = false;
-
-        // Active le moteur pour faire basculer la chaise
         JointMotor motor = hinge.motor;
-        motor.force = dropTorque;
+        motor.force          = dropTorque;
         motor.targetVelocity = targetVelocity;
-        hinge.motor = motor;
-        hinge.useMotor = true;
+        hinge.motor          = motor;
+        hinge.useMotor       = true;
 
-        // Programme la remise en place
         StartCoroutine(ResetSeatAfterDelay());
     }
 
@@ -54,13 +64,23 @@ public class DunkSeat : MonoBehaviour
     {
         yield return new WaitForSeconds(resetDelay);
 
-        // Stoppe le moteur et verrouille de nouveau la chaise
-        hinge.useMotor = false;
+        // 1. Réinitialiser la chaise
+        hinge.useMotor  = false;
         hinge.useLimits = true;
-        hinge.limits = lockedLimits;
+        hinge.limits    = lockedLimits;
+        transform.localRotation = seatInitialRotation;
 
-        // Remet la chaise à sa rotation de départ
-        transform.localRotation = initialLocalRotation;
+        // 2. Réinitialiser Bob l’Éponge
+        if (spongebobTransform != null)
+        {
+            spongebobTransform.position = spongebobInitialPosition;
+            spongebobTransform.rotation = spongebobInitialRotation;
+            if (spongebobRigidbody != null)
+            {
+                spongebobRigidbody.velocity        = Vector3.zero;
+                spongebobRigidbody.angularVelocity = Vector3.zero;
+            }
+        }
 
         hasDropped = false;
     }
