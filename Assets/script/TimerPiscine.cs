@@ -46,7 +46,7 @@ public class TimerPiscine : MonoBehaviour
         // Tant que le timer n'est pas à 0 ET que la partie n'est pas finie
         while (timer > 0 && !GameManager.Instance.GameOver)
         {
-            timerText.text = $"{timer} s";
+            timerText.text = "Timer: " + timer;
             yield return new WaitForSeconds(1f);
             timer--;
         }
@@ -56,7 +56,7 @@ public class TimerPiscine : MonoBehaviour
         {
             // Victoire
             VictoryPanel.SetActive(true);
-            VictoryText.text = $"Touché en { (20 - timer) } s !";
+            VictoryText.text += " " + (21-timer) + " secondes !";
 
             // Jouer les deux sons de victoire
             if (victoryClip1 != null)
@@ -68,7 +68,7 @@ public class TimerPiscine : MonoBehaviour
         {
             // Défaite
             DefeatPanel.SetActive(true);
-            timerText.text = "0 s";
+            timerText.text = "Fin du temps !";
             if (defeatClip != null)
                 audioSource.PlayOneShot(defeatClip);
         }

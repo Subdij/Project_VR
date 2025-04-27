@@ -13354,7 +13354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1204516247}
-  - component: {fileID: 1204516246}
+  - component: {fileID: 1204516248}
   - component: {fileID: 1204516245}
   m_Layer: 0
   m_Name: MusicManager
@@ -13459,19 +13459,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1204516246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1204516244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cb7fa01ef7908a4bbdf48b5d06ff3d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicClip: {fileID: 8300000, guid: f3aad4e1643483149bc43a646d05983c, type: 3}
 --- !u!4 &1204516247
 Transform:
   m_ObjectHideFlags: 0
@@ -13487,6 +13474,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1204516248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204516244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67a18c79bd51e704dbf34a1fa325cc98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicClip: {fileID: 8300000, guid: f3aad4e1643483149bc43a646d05983c, type: 3}
 --- !u!1001 &1208851601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24061,6 +24061,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScoreCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 993869222256044109, guid: 5ba2be0a388a2f4478154489a652ffb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2837356346977418024, guid: 5ba2be0a388a2f4478154489a652ffb3,
         type: 3}
       propertyPath: m_Pivot.x
@@ -24139,7 +24144,7 @@ PrefabInstance:
     - target: {fileID: 2837356346977418024, guid: 5ba2be0a388a2f4478154489a652ffb3,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.2293002
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 2837356346977418024, guid: 5ba2be0a388a2f4478154489a652ffb3,
         type: 3}
