@@ -10,6 +10,9 @@ TagManager:
   - RightHand
   - Throwable
   - Controller
+  - Bullet
+  - Ground
+  - Target
   layers:
   - Default
   - TransparentFX
