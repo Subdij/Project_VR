@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class RestartManager : MonoBehaviour
 {
+    public string sceneName;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,6 @@ public class RestartManager : MonoBehaviour
 
     public void ReloadScene()
     {
-        SceneManager.LoadScene("Chamboule-tout");
+        SceneManager.LoadScene(sceneName);
     }
 }

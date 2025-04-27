@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace _3rd_Party_Assets.Gun__Target.Scripts
 {
@@ -15,7 +16,8 @@ namespace _3rd_Party_Assets.Gun__Target.Scripts
         private bool _isDisabled;
 
         // Score
-        private int Score;
+        private int LocalScore;
+        public Text hiddenLocalText;
 
         private void Awake()
         {
@@ -41,6 +43,10 @@ namespace _3rd_Party_Assets.Gun__Target.Scripts
                 ToggleTarget();
                 TargetDestroyEffect();
                 Invoke("ToggleTarget", 3f);
+
+                LocalScore++;
+                hiddenLocalText.text = LocalScore.ToString();
+
             }
 
         }
