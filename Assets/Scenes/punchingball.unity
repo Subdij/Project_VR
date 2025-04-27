@@ -541,6 +541,7 @@ Transform:
   m_Children:
   - {fileID: 2085301592}
   - {fileID: 1574290478}
+  - {fileID: 1529440145}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1017284445
@@ -1329,6 +1330,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1b8d75f3e86553547a1f33a07ed6fd55,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b8d75f3e86553547a1f33a07ed6fd55,
+        type: 3}
       propertyPath: m_TagString
       value: Controller
       objectReference: {fileID: 0}
@@ -1737,6 +1743,112 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2005933349}
   m_LocalEulerAnglesHint: {x: -180, y: 0, z: 180}
+--- !u!1001 &1529440144
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 559890688}
+    m_Modifications:
+    - target: {fileID: 1351293212501580867, guid: acbd7da56ed90514bb0df924b8ebc995,
+        type: 3}
+      propertyPath: m_HideControllerOnSelect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548246721090730020, guid: acbd7da56ed90514bb0df924b8ebc995,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548246721090730020, guid: acbd7da56ed90514bb0df924b8ebc995,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548246721090730020, guid: acbd7da56ed90514bb0df924b8ebc995,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548246721090730020, guid: acbd7da56ed90514bb0df924b8ebc995,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548246721090730020, guid: acbd7da56ed90514bb0df924b8ebc995,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548246721090730020, guid: acbd7da56ed90514bb0df924b8ebc995,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548246721090730020, guid: acbd7da56ed90514bb0df924b8ebc995,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548246721090730020, guid: acbd7da56ed90514bb0df924b8ebc995,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548246721090730020, guid: acbd7da56ed90514bb0df924b8ebc995,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548246721090730020, guid: acbd7da56ed90514bb0df924b8ebc995,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853208887869250960, guid: acbd7da56ed90514bb0df924b8ebc995,
+        type: 3}
+      propertyPath: m_HideControllerOnSelect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853208887869250960, guid: acbd7da56ed90514bb0df924b8ebc995,
+        type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288243395387855290, guid: acbd7da56ed90514bb0df924b8ebc995,
+        type: 3}
+      propertyPath: m_Name
+      value: XR Hands
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288243395387855290, guid: acbd7da56ed90514bb0df924b8ebc995,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: acbd7da56ed90514bb0df924b8ebc995, type: 3}
+--- !u!4 &1529440145 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1548246721090730020, guid: acbd7da56ed90514bb0df924b8ebc995,
+    type: 3}
+  m_PrefabInstance: {fileID: 1529440144}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1529440146 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 539060822783929277, guid: acbd7da56ed90514bb0df924b8ebc995,
+    type: 3}
+  m_PrefabInstance: {fileID: 1529440144}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e4e6cca11330d4088d729ab4fc9d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1574290477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1814,6 +1926,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: XR Interaction Setup
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313654230448209575, guid: 895f6f3c2d334633b5800312285058d2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9014170783705847997, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
@@ -2785,13 +2902,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 1529440146}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 128
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1

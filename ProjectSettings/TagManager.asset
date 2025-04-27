@@ -13,6 +13,9 @@ TagManager:
   - Bullet
   - Ground
   - Target
+  - StartButton
+  - RestartButton
+  - TPButton
   layers:
   - Default
   - TransparentFX

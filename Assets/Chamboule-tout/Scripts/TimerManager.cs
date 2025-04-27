@@ -1,63 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class TimerManager : MonoBehaviour
 {
-    private int timer;
+    [Tooltip("Durée initiale du compte à rebours en secondes")]
+    public int timer = 60;
     public Text timerText;
 
-    public GameObject finalScore;
-    public GameObject currentScore;
-    public GameObject Timer;
-    public GameObject targets;
-    public GameObject gun;
+    [SerializeField] private GameObject gun;
+    [SerializeField] private GameObject targets;
 
-    public Text finalScoreText;
-    public Text currentScoreText;
-
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        timer = 60;
-        timerText.text = "Timer: " + timer;
+        StartCoroutine(Compter());
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        if (timer == 0)
-        {
-            Invoke("FinalMenu", 2f);
-        }
-    }
-
-    /* public void StartTimer()
+    private IEnumerator Compter()
     {
         while (timer > 0)
         {
-            Invoke("CountDown", 1f);
+            timerText.text = "Timer: " + timer.ToString();
+            yield return new WaitForSeconds(1f);
+            timer--;
         }
-    } */
 
-
-    private void CountDown()
-    {
-        timer += -1;
-        timerText.text = "Timer: " + timer;
-    }
-
-    private void FinalMenu()
-    {
-        finalScore.SetActive(true);
-        finalScoreText.text = "Final " + currentScoreText.text;
-
-        currentScore.SetActive(false);
-        Timer.SetActive(false);
-        targets.SetActive(false);
+        timerText.text = "Fin du timer !";
         gun.SetActive(false);
+        targets.SetActive(false);
     }
-
 }
