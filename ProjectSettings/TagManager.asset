@@ -16,6 +16,7 @@ TagManager:
   - StartButton
   - RestartButton
   - TPButton
+  - Ball
   layers:
   - Default
   - TransparentFX
