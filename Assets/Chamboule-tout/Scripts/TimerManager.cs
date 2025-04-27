@@ -34,13 +34,13 @@ public class TimerManager : MonoBehaviour
         }
     }
 
-    public void StartTimer()
+    /* public void StartTimer()
     {
         while (timer > 0)
         {
             Invoke("CountDown", 1f);
         }
-    }
+    } */
 
 
     private void CountDown()
