@@ -1,10 +1,10 @@
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class ScoreManagers : MonoBehaviour
 {
     public static ScoreManagers Instance { get; private set; }
-    public TextMeshProUGUI scoreText;
+    public Text scoreText;
     private int score = 0;
 
     void Awake()
@@ -40,6 +40,6 @@ public class ScoreManagers : MonoBehaviour
     private void UpdateScoreUI()
     {
         if (scoreText != null)
-            scoreText.text = $"Score : {score}";
+            scoreText.text = $"Puissance: {score}";
     }
 }
