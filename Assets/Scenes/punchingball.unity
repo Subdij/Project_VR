@@ -1694,7 +1694,7 @@ SpringJoint:
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.99399996, y: 2.0157056, z: -7.969274}
+  m_ConnectedAnchor: {x: -0.99399996, y: 2.2200534, z: -7.6002274}
   serializedVersion: 2
   m_Spring: 50
   m_Damper: 5
@@ -1848,7 +1848,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8f58db0aa44e1a2468b84d355ecb5246, type: 2}
+  - {fileID: 2100000, guid: c2489dcdb3b75f242adf05cf2b0a42a3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2297,7 +2297,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cb7fa01ef7908a4bbdf48b5d06ff3d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicClip: {fileID: 8300000, guid: f3aad4e1643483149bc43a646d05983c, type: 3}
 --- !u!4 &1445283790
 Transform:
   m_ObjectHideFlags: 0
