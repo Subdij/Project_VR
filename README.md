@@ -31,7 +31,7 @@ Le projet comprend 5 attractions principales accessibles depuis le hub central :
 
 1.  **Cloner le dépôt** :
     ```bash
-    git clone https://github.com/votre-username/Project_VR.git
+    git clone https://github.com/Subdij/Project_VR.git
     ```
 2.  **Ouvrir avec Unity Hub** :
     *   Ajoutez le dossier cloné dans Unity Hub.
